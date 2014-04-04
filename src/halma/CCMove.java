@@ -67,7 +67,7 @@ public class CCMove extends Move{
 		String s="";
 
 		if(from == null || to == null)
-			s=  String.format("Player %d end turn", player_id);
+			s= String.format("Player %d end turn", player_id);
 		else
 			s= String.format("Player %d move from (%c,%d) to (%c,%d)", player_id, alphabet.charAt(from.y), from.x+1, alphabet.charAt(to.y), to.x+1);
 

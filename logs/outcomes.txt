@@ -1,2 +1,59 @@
 1	random	random	random	random	Player-1	random	100	game00001.log	
 2	random	random	random	random	Player-1	random	100	game00002.log	
+3	random	random	random	random	Player-1	random	100	game00003.log	
+4	omni	random	random	random	Player-1	random	100	game00004.log	
+5	Human	omni	omni	omni	UNDECIDED	NOBODY	5	game00005.log	USER CANCEL
+6	omni	random	random	random	Player-1	random	100	game00006.log	
+7	omni	random	random	random	Player-1	random	100	game00007.log	
+8	omni	random	random	random	Player-1	random	2	game00008.log	TIMEOUT Player-0
+9	omni	random	random	random	Player-1	random	100	game00009.log	
+10	omni	random	random	random	Player-1	random	100	game00010.log	
+11	omni	random	random	random	Player-1	random	100	game00011.log	
+12	omni	random	random	random	Player-1	random	100	game00012.log	
+13	omni	random	random	random	Player-1	random	100	game00013.log	
+14	omni	random	random	random	Player-1	random	0	game00014.log	TIMEOUT Player-0
+15	omni	random	random	random	Player-1	random	4	game00015.log	TIMEOUT Player-0
+16	omni	random	random	random	Player-1	random	1	game00016.log	TIMEOUT Player-0
+17	omni	random	random	random	Player-1	random	3	game00017.log	TIMEOUT Player-0
+18	omni	random	random	random	Player-1	random	0	game00018.log	TIMEOUT Player-0
+19	omni	random	random	random	Player-1	random	1	game00019.log	TIMEOUT Player-0
+20	omni	random	random	random	Player-1	random	1	game00020.log	TIMEOUT Player-0
+21	omni	random	random	random	Player-1	random	3	game00021.log	TIMEOUT Player-0
+22	omni	random	random	random	Player-1	random	0	game00022.log	TIMEOUT Player-0
+23	omni	random	random	random	Player-1	random	1	game00023.log	TIMEOUT Player-0
+24	omni	random	random	random	Player-1	random	1	game00024.log	TIMEOUT Player-0
+25	omni	random	random	random	Player-1	random	100	game00025.log	
+26	omni	random	random	random	Player-1	random	100	game00026.log	
+27	omni	random	random	random	Player-1	random	100	game00027.log	
+28	omni	random	random	random	Player-1	random	100	game00028.log	
+29	omni	random	random	random	Player-1	random	100	game00029.log	
+30	omni	random	random	Human	Player-1	random	100	game00030.log	
+31	omni	random	random	random	Player-1	random	1	game00031.log	TIMEOUT Player-0
+32	omni	random	random	random	Player-1	random	1	game00032.log	TIMEOUT Player-0
+33	omni	random	random	random	Player-1	random	100	game00033.log	
+34	omni	random	random	random	Player-1	random	100	game00034.log	
+35	omni	random	random	random	Player-1	random	100	game00035.log	
+36	omni	random	random	random	UNDECIDED	NOBODY	0	game00036.log	USER CANCEL
+37	omni	random	random	random	Player-1	random	100	game00037.log	
+38	omni	random	random	random	Player-1	random	0	game00038.log	TIMEOUT Player-0
+39	omni	random	random	random	Player-1	random	0	game00039.log	TIMEOUT Player-0
+40	omni	random	random	random	Player-1	random	100	game00040.log	
+41	omni	random	random	random	Player-1	random	0	game00041.log	TIMEOUT Player-0
+42	omni	random	random	random	Player-0	omni	100	game00042.log	
+43	omni	random	random	random	Player-0	omni	100	game00043.log	
+44	omni	random	random	random	Player-0	omni	100	game00044.log	
+45	omni	random	random	random	Player-0	omni	100	game00045.log	
+46	omni	random	random	random	Player-0	omni	100	game00046.log	
+47	omni	omni	omni	omni	Player-1	omni	100	game00047.log	TIMEOUT Player-3
+48	omni	omni	omni	omni	Player-1	omni	90	game00048.log	TIMEOUT Player-0
+49	omni	omni	omni	omni	Player-1	omni	55	game00049.log	ILLEGAL MOVE: Player 0 end turn
+50	omni	omni	omni	omni	Player-1	omni	84	game00050.log	TIMEOUT Player-0
+51	omni	omni	omni	omni	Player-1	omni	52	game00051.log	TIMEOUT Player-3
+52	omni	omni	omni	omni	Player-1	omni	142	game00052.log	
+53	omni	omni	omni	omni	Player-0	omni	174	game00053.log	
+54	omni	omni	omni	omni	Player-0	omni	248	game00054.log	
+55	omni	omni	omni	omni	Player-1	omni	172	game00055.log	
+56	omni	omni	omni	omni	Player-1	omni	220	game00056.log	
+57	omni	omni	omni	omni	Player-1	omni	61	game00057.log	TIMEOUT Player-0
+58	omni	omni	omni	omni	Player-1	omni	101	game00058.log	
+59	omni	omni	omni	omni	Player-1	omni	180	game00059.log	
