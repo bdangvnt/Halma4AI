@@ -1,0 +1,81 @@
+# Server version 0.08 running on fbrizu:8123
+# Game ID: 73
+# Board class: halma.CCBoard
+# Timeout: 1000
+# Date: Tue Apr 15 08:08:38 EDT 2014
+# Player 1: Player-0, 'Human', running on fbrizu
+# Player 2: Player-1, 'omni', running on fbrizu
+# Player 3: Player-2, 'omni', running on fbrizu
+# Player 4: Player-3, 'omni', running on fbrizu
+START Player-0 Human
+START Player-1 omni
+START Player-2 omni
+START Player-3 omni
+0 (2,2) (3,3)
+1 (15,2) (13,4)
+1 null null
+2 (1,14) (3,12)
+2 null null
+3 (15,13) (13,11)
+3 null null
+0 (0,0) (2,2)
+0 (2,2) (4,4)
+0 null null
+1 (13,0) (11,2)
+1 null null
+2 (0,13) (2,11)
+2 null null
+3 (14,12) (12,10)
+3 null null
+0 (0,1) (2,3)
+0 (2,3) (4,3)
+0 (4,3) (4,5)
+0 null null
+1 (12,1) (10,3)
+1 null null
+2 (1,15) (3,13)
+2 null null
+3 (13,11) (11,9)
+3 null null
+0 (1,0) (3,2)
+0 (3,2) (3,4)
+0 (3,4) (5,4)
+0 null null
+1 (11,2) (9,4)
+1 null null
+2 (2,14) (4,12)
+2 null null
+3 (12,10) (10,8)
+3 null null
+0 (0,3) (2,3)
+0 (2,3) (4,3)
+0 (4,3) (6,5)
+0 null null
+1 (14,1) (12,3)
+1 null null
+2 (2,15) (4,13)
+2 null null
+3 (11,9) (9,7)
+3 null null
+0 (2,0) (4,2)
+0 (4,2) (2,0)
+0 null null
+1 (14,0) (12,2)
+1 null null
+2 (3,14) (5,12)
+2 null null
+3 (10,8) (8,6)
+3 null null
+0 (3,0) (3,2)
+0 (3,2) (3,4)
+0 (3,4) (5,6)
+0 null null
+1 (13,1) (11,3)
+1 null null
+2 (0,14) (2,12)
+2 null null
+3 (9,7) (7,5)
+3 null null
+GAMEOVER USER CANCEL
+UNDECIDED
+# Game ended: Tue Apr 15 08:10:05 EDT 2014

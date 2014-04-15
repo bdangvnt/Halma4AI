@@ -1,0 +1,16 @@
+# Server version 0.08 running on fbrizu:8123
+# Game ID: 85
+# Board class: halma.CCBoard
+# Timeout: 1000
+# Date: Tue Apr 15 16:27:54 EDT 2014
+# Player 1: Player-0, 'omni', running on fbrizu
+# Player 2: Player-1, 'omni', running on fbrizu
+# Player 3: Player-2, 'omni', running on fbrizu
+# Player 4: Player-3, 'omni', running on fbrizu
+START Player-0 omni
+START Player-1 omni
+START Player-2 omni
+START Player-3 omni
+GAMEOVER TIMEOUT Player-0
+WINNER Player-1
+# Game ended: Tue Apr 15 16:27:55 EDT 2014

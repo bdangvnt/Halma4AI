@@ -43,7 +43,7 @@ implements BoardPanel.BoardPanelListener  {
     protected static final String[] PLAYER_CLASSES = { 
         /*	"breakthrough.BTRandomPlayer", 
                 "breakthrough.BTFixedPlayer", */
-        "halma.CCRandomPlayer", "s260429423.Omni"};
+        "halma.CCRandomPlayer", "s260429423.Omni", "s260429423.DiagonalAI"};
     private static final int BOARD_SIZE = 400;
     private static final int LIST_WIDTH = 280;
     
