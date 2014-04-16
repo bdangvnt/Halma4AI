@@ -388,65 +388,65 @@ public class Algorithm {
 	public static boolean isCorner3DiagonalFilled(int playerID, CCBoard board) {
 		//Top left player
 		if(playerID == 0) {
-			if(board.getPieceAt(new Point(15,15)) != null || board.getPieceAt(new Point(15,15)) != playerID)
+			if(board.getPieceAt(new Point(15,15)) == null || board.getPieceAt(new Point(15,15)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(14,15)) != null || board.getPieceAt(new Point(14,15)) != playerID)
+			if(board.getPieceAt(new Point(14,15)) == null || board.getPieceAt(new Point(14,15)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(13,15)) != null || board.getPieceAt(new Point(13,15)) != playerID)
+			if(board.getPieceAt(new Point(13,15)) == null || board.getPieceAt(new Point(13,15)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(15,14)) != null || board.getPieceAt(new Point(15,14)) != playerID)
+			if(board.getPieceAt(new Point(15,14)) == null || board.getPieceAt(new Point(15,14)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(14,14)) != null || board.getPieceAt(new Point(14,14)) != playerID)
+			if(board.getPieceAt(new Point(14,14)) == null || board.getPieceAt(new Point(14,14)) != playerID)
 				return false;;
-			if(board.getPieceAt(new Point(15,13)) != null || board.getPieceAt(new Point(15,13)) != playerID)
+			if(board.getPieceAt(new Point(15,13)) == null || board.getPieceAt(new Point(15,13)) != playerID)
 				return false;
 		}
 		
 		//Top right player
 		if(playerID == 1) {
-			if(board.getPieceAt(new Point(0,15)) != null || board.getPieceAt(new Point(0,15)) != playerID)
+			if(board.getPieceAt(new Point(0,15)) == null || board.getPieceAt(new Point(0,15)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(1,15)) != null || board.getPieceAt(new Point(1,15)) != playerID)
+			if(board.getPieceAt(new Point(1,15)) == null || board.getPieceAt(new Point(1,15)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(2,15)) != null || board.getPieceAt(new Point(2,15)) != playerID)
+			if(board.getPieceAt(new Point(2,15)) == null || board.getPieceAt(new Point(2,15)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(0,14)) != null || board.getPieceAt(new Point(0,14)) != playerID)
+			if(board.getPieceAt(new Point(0,14)) == null || board.getPieceAt(new Point(0,14)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(1,14)) != null || board.getPieceAt(new Point(1,14)) != playerID)
+			if(board.getPieceAt(new Point(1,14)) == null || board.getPieceAt(new Point(1,14)) != playerID)
 				return false;;
-			if(board.getPieceAt(new Point(0,13)) != null || board.getPieceAt(new Point(0,13)) != playerID)
+			if(board.getPieceAt(new Point(0,13)) == null || board.getPieceAt(new Point(0,13)) != playerID)
 				return false;
 		}
 		
 		//Bottom left player
 		if(playerID == 2) {
-			if(board.getPieceAt(new Point(15,0)) != null || board.getPieceAt(new Point(15,0)) != playerID)
+			if(board.getPieceAt(new Point(15,0)) == null || board.getPieceAt(new Point(15,0)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(14,0)) != null || board.getPieceAt(new Point(14,0)) != playerID)
+			if(board.getPieceAt(new Point(14,0)) == null || board.getPieceAt(new Point(14,0)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(13,0)) != null || board.getPieceAt(new Point(13,0)) != playerID)
+			if(board.getPieceAt(new Point(13,0)) == null || board.getPieceAt(new Point(13,0)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(15,1)) != null || board.getPieceAt(new Point(15,1)) != playerID)
+			if(board.getPieceAt(new Point(15,1)) == null || board.getPieceAt(new Point(15,1)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(14,1)) != null || board.getPieceAt(new Point(14,1)) != playerID)
+			if(board.getPieceAt(new Point(14,1)) == null || board.getPieceAt(new Point(14,1)) != playerID)
 				return false;;
-			if(board.getPieceAt(new Point(15,2)) != null || board.getPieceAt(new Point(15,2)) != playerID)
+			if(board.getPieceAt(new Point(15,2)) == null || board.getPieceAt(new Point(15,2)) != playerID)
 				return false;
 		}
 		
 		//Bottom right player
 		if(playerID == 3) {
-			if(board.getPieceAt(new Point(0,0)) != null || board.getPieceAt(new Point(0,0)) != playerID)
+			if(board.getPieceAt(new Point(0,0)) == null || board.getPieceAt(new Point(0,0)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(1,0)) != null || board.getPieceAt(new Point(1,0)) != playerID)
+			if(board.getPieceAt(new Point(1,0)) == null || board.getPieceAt(new Point(1,0)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(2,0)) != null || board.getPieceAt(new Point(2,0)) != playerID)
+			if(board.getPieceAt(new Point(2,0)) == null || board.getPieceAt(new Point(2,0)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(0,1)) != null || board.getPieceAt(new Point(0,1)) != playerID)
+			if(board.getPieceAt(new Point(0,1)) == null || board.getPieceAt(new Point(0,1)) != playerID)
 				return false;
-			if(board.getPieceAt(new Point(1,1)) != null || board.getPieceAt(new Point(1,1)) != playerID)
+			if(board.getPieceAt(new Point(1,1)) == null || board.getPieceAt(new Point(1,1)) != playerID)
 				return false;;
-			if(board.getPieceAt(new Point(0,2)) != null || board.getPieceAt(new Point(0,2)) != playerID)
+			if(board.getPieceAt(new Point(0,2)) == null || board.getPieceAt(new Point(0,2)) != playerID)
 				return false;
 		}
 
@@ -690,9 +690,10 @@ public class Algorithm {
 			for(int i = 0; i < moves.size(); i++) {
 				if(moves.get(i).getFrom() != null && moves.get(i).getTo() != null) {
 					newManhattan = Algorithm.getManhattanDist(moves.get(i).getTo().x, moves.get(i).getTo().y, pointDestination.x, pointDestination.y);
-					if(newManhattan <= manhattan) {
+					if(newManhattan < manhattan) {
 						manhattan = newManhattan;
 						move = moves.get(i);
+						//return moves.get(i);
 					}
 				}
 			}

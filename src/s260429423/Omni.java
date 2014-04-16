@@ -55,7 +55,7 @@ public class Omni extends Player {
 		
 		//Prints number of pieces in goal zone
 		goalPieces = Algorithm.numPiecesInGoal(this.playerID, board);
-		System.out.println(goalPieces);
+		System.out.println("Pieces in goal for Player " + this.playerID + ": " + goalPieces);
 		
 		//Strategy starts here
 		if(earlyGame) {
@@ -74,7 +74,7 @@ public class Omni extends Player {
 		}
 		
 		//When there are 10 pieces in the zone, use another Manhattan
-		else if(goalPieces >= 10) {
+		else if(goalPieces == 10 || goalPieces == 11) {
 			Algorithm.filterPointsMovingAway(this.playerID, moves, 0);
 			if(moves.size() > 0) {
 				minIndex = Algorithm.useManhattanDist(this.playerID, moves, currDist);
@@ -84,9 +84,10 @@ public class Omni extends Player {
 		
 		//When there are 12 pieces in the zone, use another Manhattan
 		else if(goalPieces == 12) {
-			System.out.println("-----END GAME-----");
+			System.out.println("*****END GAME*****");
 			if(moves.size() > 0) {
 				if(!Algorithm.isCorner3DiagonalFilled(this.playerID, board)) {
+					System.out.println("DIAG NOT FILLED");
 					Algorithm.filterPointsMovingAway(this.playerID, moves, 0);
 					if(moves.size() > 0) {
 						minIndex = Algorithm.useManhattanDist(this.playerID, moves, currDist);
@@ -94,11 +95,12 @@ public class Omni extends Player {
 					}
 				}
 				else {
+					System.out.println("DIAG FILLED!!");
 					Point pointOutOfGoal = new Point(0,0);
 					Point pointDestination;
 					
 					for(int i = 0; i < pts.size(); i++) {
-						if(Algorithm.IsPieceInGoal(this.playerID, pts.get(i))) {
+						if(!Algorithm.IsPieceInGoal(this.playerID, pts.get(i))) {
 							pointOutOfGoal = pts.get(i);
 							break;
 						}
@@ -107,14 +109,23 @@ public class Omni extends Player {
 					//Finds the empty spot in the goal
 					pointDestination = Algorithm.findEmptyGoal(this.playerID, board);
 					
+					System.out.println("pointOutOfGoal " + pointOutOfGoal + " - pointDestination " + pointDestination);
+					
 					//Filters out moves
 					Algorithm.filterEndGame(moves, pointOutOfGoal, pointDestination);
 					
 					if(moves.size() > 0) {
 						return Algorithm.getBestMoveEndGame(moves, pointOutOfGoal, pointDestination);
 					}
+					else if(moves.size() == 0 && board.getLastMoved() != null) {
+						return new CCMove(this.playerID, null, null);
+					}
 				}
 			}
+		}
+		
+		if(board.getLastMoved() != null) {
+			return new CCMove(this.playerID, null, null);
 		}
 
 		// Otherwise, return a randomly selected move.
