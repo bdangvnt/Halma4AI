@@ -37,6 +37,9 @@ public class Omni extends Player {
 		
 		// Cast the arguments to the objects we want to work with
 		CCBoard board = (CCBoard) theboard;
+		
+		//Array containing the location of the player's pieces
+		ArrayList<Point> pts = board.getPieces(playerID);
 
 		// Get the list of legal moves.
 		ArrayList<CCMove> moves = board.getLegalMoves();
@@ -62,21 +65,56 @@ public class Omni extends Player {
 		//Mid-game
 		//
 
-		Algorithm.filterPointsMovingAway(this.playerID, moves);
-
-		if(moves.size() > 0) {
-			minIndex = Algorithm.useManhattanDist(this.playerID, moves, currDist);
-			return moves.get(minIndex);
+		if(goalPieces < 10) {
+			Algorithm.filterPointsMovingAway(this.playerID, moves);
+			if(moves.size() > 0) {
+				minIndex = Algorithm.useManhattanDist(this.playerID, moves, currDist);
+				return moves.get(minIndex);
+			}
 		}
 		
 		//When there are 10 pieces in the zone, use another Manhattan
-		if(goalPieces >= 10) {
-			
+		else if(goalPieces >= 10) {
+			Algorithm.filterPointsMovingAway(this.playerID, moves, 0);
+			if(moves.size() > 0) {
+				minIndex = Algorithm.useManhattanDist(this.playerID, moves, currDist);
+				return moves.get(minIndex);
+			}
 		}
 		
 		//When there are 12 pieces in the zone, use another Manhattan
-		if(goalPieces == 12) {
-			
+		else if(goalPieces == 12) {
+			System.out.println("-----END GAME-----");
+			if(moves.size() > 0) {
+				if(!Algorithm.isCorner3DiagonalFilled(this.playerID, board)) {
+					Algorithm.filterPointsMovingAway(this.playerID, moves, 0);
+					if(moves.size() > 0) {
+						minIndex = Algorithm.useManhattanDist(this.playerID, moves, currDist);
+						return moves.get(minIndex);
+					}
+				}
+				else {
+					Point pointOutOfGoal = new Point(0,0);
+					Point pointDestination;
+					
+					for(int i = 0; i < pts.size(); i++) {
+						if(Algorithm.IsPieceInGoal(this.playerID, pts.get(i))) {
+							pointOutOfGoal = pts.get(i);
+							break;
+						}
+					}
+					
+					//Finds the empty spot in the goal
+					pointDestination = Algorithm.findEmptyGoal(this.playerID, board);
+					
+					//Filters out moves
+					Algorithm.filterEndGame(moves, pointOutOfGoal, pointDestination);
+					
+					if(moves.size() > 0) {
+						return Algorithm.getBestMoveEndGame(moves, pointOutOfGoal, pointDestination);
+					}
+				}
+			}
 		}
 
 		// Otherwise, return a randomly selected move.
