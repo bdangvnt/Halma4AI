@@ -96,6 +96,9 @@ public class Omni extends Player {
 				}
 				else {
 					System.out.println("DIAG FILLED!!");
+					if(board.getLastMoved() != null) {
+						return new CCMove(this.playerID, null, null);
+					}
 					Point pointOutOfGoal = new Point(0,0);
 					Point pointDestination;
 					

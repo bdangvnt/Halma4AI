@@ -102,3 +102,12 @@
 108	omni	omni	omni	omni	Player-0	omni	151	game00108.log	TIMEOUT Player-1
 109	omni	random	omni	omni	Player-1	random	100	game00109.log	
 110	omni	omni	omni	omni	Player-0	omni	128	game00110.log	
+111	omni	omni	omni	omni	Player-1	omni	110	game00111.log	TIMEOUT Player-0
+112	omni	omni	omni	omni	Player-0	omni	115	game00112.log	
+113	omni	omni	omni	omni	Player-1	omni	109	game00113.log	TIMEOUT Player-0
+114	omni	omni	omni	omni	Player-0	omni	113	game00114.log	
+115	omni	omni	omni	omni	Player-0	omni	120	game00115.log	
+116	omni	omni	omni	omni	Player-1	omni	123	game00116.log	
+117	omni	omni	omni	omni	Player-0	omni	124	game00117.log	
+118	omni	omni	omni	omni	Player-1	omni	128	game00118.log	
+119	omni	omni	omni	omni	Player-1	omni	116	game00119.log	
