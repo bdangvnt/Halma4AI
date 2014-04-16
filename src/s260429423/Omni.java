@@ -112,7 +112,10 @@ public class Omni extends Player {
 					if(board.getLastMoved() != null) {
 						return new CCMove(this.playerID, null, null);
 					}
+<<<<<<< HEAD
 					
+=======
+>>>>>>> 82b5af342c9f0f99a80af81084884222be6ee96a
 					Point pointOutOfGoal = new Point(0,0);
 					Point pointDestination;
 					
