@@ -1,3 +1,14 @@
+<<<<<<< HEAD
+# Server version 0.08 running on fbrizu:8123
+# Game ID: 111
+# Board class: halma.CCBoard
+# Timeout: 1000
+# Date: Wed Apr 16 04:16:02 EDT 2014
+# Player 1: Player-0, 'omni', running on fbrizu
+# Player 2: Player-1, 'omni', running on fbrizu
+# Player 3: Player-2, 'omni', running on fbrizu
+# Player 4: Player-3, 'omni', running on fbrizu
+=======
 # Server version 0.08 running on ubuntu:8123
 # Game ID: 111
 # Board class: halma.CCBoard
@@ -7,6 +18,7 @@
 # Player 2: Player-1, 'omni', running on localhost
 # Player 3: Player-2, 'omni', running on localhost
 # Player 4: Player-3, 'omni', running on localhost
+>>>>>>> 82b5af342c9f0f99a80af81084884222be6ee96a
 START Player-0 omni
 START Player-1 omni
 START Player-2 omni
@@ -245,13 +257,56 @@ START Player-3 omni
 0 (0,0) (1,1)
 1 (9,3) (8,4)
 2 (6,12) (7,11)
+<<<<<<< HEAD
+3 (11,8) (12,7)
+0 (1,1) (2,2)
+1 (15,0) (14,1)
+2 (5,7) (4,8)
+3 (9,10) (11,12)
+3 (11,12) (9,10)
+3 null null
+0 (2,2) (3,3)
+1 (14,1) (13,2)
+2 (4,8) (5,7)
+3 (9,11) (10,12)
+0 (7,9) (9,11)
+0 (9,11) (11,13)
+0 null null
+1 (13,2) (12,3)
+2 (5,11) (7,9)
+2 (7,9) (9,7)
+2 null null
+3 (10,12) (9,11)
+0 (3,3) (4,4)
+1 (6,10) (5,11)
+2 (4,12) (6,10)
+2 null null
+3 (9,11) (7,9)
+3 null null
+0 (4,4) (5,5)
+1 (12,3) (11,4)
+2 (9,7) (10,6)
+3 (9,10) (9,11)
+=======
 3 (9,10) (9,12)
 3 null null
+>>>>>>> 82b5af342c9f0f99a80af81084884222be6ee96a
 0 (7,8) (9,10)
 0 (9,10) (11,12)
 0 null null
 1 (9,6) (7,8)
 1 null null
+<<<<<<< HEAD
+2 (10,6) (11,5)
+3 (10,11) (9,10)
+0 (7,4) (9,6)
+0 (9,6) (11,8)
+0 null null
+1 (11,4) (9,6)
+1 null null
+2 (11,5) (12,4)
+3 (9,11) (10,12)
+=======
 2 (7,10) (9,10)
 2 null null
 3 (11,8) (9,6)
@@ -262,12 +317,62 @@ START Player-3 omni
 2 (9,10) (11,8)
 2 null null
 3 (10,11) (9,10)
+>>>>>>> 82b5af342c9f0f99a80af81084884222be6ee96a
 0 (8,9) (10,11)
 0 (10,11) (12,13)
 0 null null
 1 (10,7) (8,9)
 1 (8,9) (6,11)
 1 null null
+<<<<<<< HEAD
+2 (12,4) (13,3)
+3 (10,12) (9,11)
+0 (11,12) (13,14)
+0 null null
+1 (6,11) (5,12)
+2 (13,3) (14,2)
+3 (9,10) (8,9)
+0 (12,13) (14,15)
+0 null null
+1 (5,12) (4,13)
+2 (14,2) (15,1)
+3 (8,9) (6,7)
+3 null null
+0 (11,8) (12,9)
+1 (11,6) (10,7)
+2 (9,8) (11,6)
+2 null null
+3 (11,10) (9,8)
+3 null null
+0 (11,13) (12,14)
+1 (10,7) (8,9)
+1 (8,9) (6,11)
+1 null null
+2 (11,6) (12,5)
+3 (6,7) (5,6)
+0 (12,14) (13,15)
+1 (6,11) (5,12)
+2 (12,5) (13,4)
+3 (5,6) (4,5)
+0 (12,9) (13,10)
+1 (5,12) (3,14)
+1 null null
+2 (13,4) (14,3)
+3 (4,5) (3,4)
+0 (13,10) (14,11)
+1 (4,13) (2,15)
+1 null null
+2 (7,10) (8,9)
+3 (8,11) (7,10)
+0 (14,11) (15,12)
+1 (5,11) (4,12)
+2 (8,9) (10,7)
+2 null null
+3 (3,4) (2,3)
+GAMEOVER TIMEOUT Player-0
+WINNER Player-1
+# Game ended: Wed Apr 16 04:16:21 EDT 2014
+=======
 2 (11,8) (12,7)
 3 (9,10) (8,9)
 0 (11,12) (13,14)
@@ -656,3 +761,4 @@ START Player-3 omni
 GAMEOVER TIMEOUT Player-0
 WINNER Player-1
 # Game ended: Wed Apr 16 04:49:51 EDT 2014
+>>>>>>> 82b5af342c9f0f99a80af81084884222be6ee96a

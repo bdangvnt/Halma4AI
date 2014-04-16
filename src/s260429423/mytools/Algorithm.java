@@ -254,6 +254,60 @@ public class Algorithm {
 		return minIndex;
 	}
 	
+	//Gets a piece outside the goal and tries to make it go towards the center of the goal zone
+	public static CCMove useManhattanDist2(int playerID, ArrayList<CCMove> moves) {
+		Point pointDestination = new Point(0,0);
+		int currManhattan;
+		int newManhattan;
+		int index = -1;
+		int bestManhattan = 0;
+		
+		if(playerID == 0)
+			pointDestination = new Point(13,13);
+		else if(playerID == 1)
+			pointDestination = new Point(2,13);
+		else if(playerID == 2)
+			pointDestination = new Point(13,2);
+		else if(playerID == 3)
+			pointDestination = new Point(2,2);
+		
+		for(int i = 0; i < moves.size(); i++) {
+			if(moves.get(i).getFrom() != null && moves.get(i).getTo() != null) {
+				currManhattan = Algorithm.getManhattanDist(moves.get(i).getFrom().x, moves.get(i).getFrom().y, pointDestination.x, pointDestination.y);
+				newManhattan = Algorithm.getManhattanDist(moves.get(i).getTo().x, moves.get(i).getTo().y, pointDestination.x, pointDestination.y);
+				
+				if(currManhattan - newManhattan > bestManhattan) {
+					bestManhattan = currManhattan - newManhattan;
+					index = i;
+				}
+				
+			}
+		}
+		if(index != -1) {
+			moves.get(index).toPrettyString();
+			return moves.get(index);
+		}
+		return null;
+	}
+	
+	public static void getMovesOutOfGoal(int playerID, ArrayList<CCMove> moves) {
+		int i = 0;
+		while(i < moves.size()) {
+			if(moves.get(i).getFrom() != null && moves.get(i).getTo() != null) {
+				if(!Algorithm.IsPieceInGoal(playerID, moves.get(i).getFrom())) {
+					moves.remove(i);
+				}
+				else {
+					i++;
+				}
+			}
+			else {
+				moves.remove(i);
+			}
+		}
+	}
+	
+	//Early game moves
 	public static CCMove earlyGameMove(int playerID, int turn) {
 		
 	return null;
@@ -681,9 +735,9 @@ public class Algorithm {
 	}
 	
 	//From a list of move, given a token and a final destination, it'll try to get that piece into its spot
-	public static CCMove getBestMoveEndGame(ArrayList<CCMove> moves, Point pointOutOfGoal, Point pointDestination) {
+	public static CCMove getBestMoveEndGame(int playerID, ArrayList<CCMove> moves, Point pointOutOfGoal, Point pointDestination) {
 		int manhattan = Algorithm.getManhattanDist(pointOutOfGoal.x, pointOutOfGoal.y, pointDestination.x, pointDestination.y);
-		CCMove move = null;
+		CCMove move = new CCMove(playerID, null, null);
 		int newManhattan;
 		
 		if(moves.size() > 0) {
