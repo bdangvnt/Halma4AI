@@ -71,6 +71,19 @@ public class Omni extends Player {
 				minIndex = Algorithm.useManhattanDist(this.playerID, moves, currDist);
 				return moves.get(minIndex);
 			}
+			
+			//test begin
+//			else {
+//				CCMove moveEarly;
+//				moves = board.getLegalMoves();
+//				Algorithm.getMovesOutOfGoal(this.playerID, moves);
+//				moveEarly = Algorithm.useManhattanDist2(this.playerID, moves);
+//				if(moveEarly != null) {
+//					return moveEarly;
+//				}
+//				moves = board.getLegalMoves();
+//				Algorithm.filterPointsMovingAway(this.playerID, moves);
+//			}
 		}
 		
 		//When there are 10 pieces in the zone, use another Manhattan
@@ -96,6 +109,10 @@ public class Omni extends Player {
 				}
 				else {
 					System.out.println("DIAG FILLED!!");
+					if(board.getLastMoved() != null) {
+						return new CCMove(this.playerID, null, null);
+					}
+					
 					Point pointOutOfGoal = new Point(0,0);
 					Point pointDestination;
 					
@@ -115,9 +132,11 @@ public class Omni extends Player {
 					Algorithm.filterEndGame(moves, pointOutOfGoal, pointDestination);
 					
 					if(moves.size() > 0) {
-						return Algorithm.getBestMoveEndGame(moves, pointOutOfGoal, pointDestination);
+						System.out.println("Yup this happened");
+						return Algorithm.getBestMoveEndGame(this.playerID, moves, pointOutOfGoal, pointDestination);
 					}
 					else if(moves.size() == 0 && board.getLastMoved() != null) {
+						System.out.println("What?!");
 						return new CCMove(this.playerID, null, null);
 					}
 				}
