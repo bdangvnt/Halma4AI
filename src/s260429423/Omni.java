@@ -50,17 +50,17 @@ public class Omni extends Player {
 		
 		//Prints useful stuff
 		//Manhattan distance
-		System.out.println("Manhattan Distance for Player " + this.playerID + ": " + Algorithm.getShortestManhattanDist(this.playerID, board));
 		currDist = Algorithm.getShortestManhattanDist(this.playerID, board);
+		System.out.println("Manhattan Distance for Player " + this.playerID + ": " + currDist);
 		
 		//Prints number of pieces in goal zone
 		goalPieces = Algorithm.numPiecesInGoal(this.playerID, board);
 		System.out.println("Pieces in goal for Player " + this.playerID + ": " + goalPieces);
 		
 		//Strategy starts here
-		if(earlyGame) {
-			move = Algorithm.earlyGameMove(this.playerID, this.turn);
-		}
+//		if(earlyGame) {
+//			move = Algorithm.earlyGameMove(this, this.playerID, this.turn);
+//		}
 		
 		//Mid-game
 		//
@@ -73,17 +73,20 @@ public class Omni extends Player {
 			}
 			
 			//test begin
-//			else {
-//				CCMove moveEarly;
-//				moves = board.getLegalMoves();
-//				Algorithm.getMovesOutOfGoal(this.playerID, moves);
-//				moveEarly = Algorithm.useManhattanDist2(this.playerID, moves);
-//				if(moveEarly != null) {
-//					return moveEarly;
-//				}
-//				moves = board.getLegalMoves();
-//				Algorithm.filterPointsMovingAway(this.playerID, moves);
-//			}
+			else if(currDist <= 60) {
+				CCMove moveEarly;
+				moves = board.getLegalMoves();
+				Algorithm.getMovesOutOfGoal(this.playerID, moves);
+				moveEarly = Algorithm.useManhattanDist2(this.playerID, moves);
+				if(moveEarly != null) {
+					return moveEarly;
+				}
+				if(board.getLastMoved() != null) {
+					return new CCMove(this.playerID, null, null);
+				}
+				moves = board.getLegalMoves();
+				Algorithm.filterPointsMovingAway(this.playerID, moves);
+			}
 		}
 		
 		//When there are 10 pieces in the zone, use another Manhattan
@@ -112,10 +115,7 @@ public class Omni extends Player {
 					if(board.getLastMoved() != null) {
 						return new CCMove(this.playerID, null, null);
 					}
-<<<<<<< HEAD
 					
-=======
->>>>>>> 82b5af342c9f0f99a80af81084884222be6ee96a
 					Point pointOutOfGoal = new Point(0,0);
 					Point pointDestination;
 					
